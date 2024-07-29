@@ -1,0 +1,1 @@
+web: gunicorn kids_first_aid.wsgi

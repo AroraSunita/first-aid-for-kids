@@ -1,3 +1,11 @@
+body {
+    background: #d30000;
+}
+
 h1 {
     color: red;
     }
+
+footer {
+    font-family: lexend;
+}

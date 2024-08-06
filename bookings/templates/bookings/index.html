@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<!-- Intro  -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="text-center">Hello and welcome!</h2>
+            <p class="text-center">My name is Pooja Dass, and I am a dedicated nurse working in the Accident & Emergency (A&E) department.
+                With years of hands-on experience in critical care, I am passionate about teaching essential first aid skills to children in primary schools.</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-md-6">
+            <h2 class="text-center">Contact Me</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

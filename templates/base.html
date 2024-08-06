@@ -75,9 +75,14 @@
         </div>
       </nav>
       
-    <h1>If this heading is red static files are being served... </h1>
+    <!-- <h1>If this heading is red static files are being served... </h1> -->
 
-    
+    <main class="flex-shrink-0 main-bg">
+      {% block content %}
+      <!-- Content Goes here -->
+      {% endblock content %}
+    </main>
+
     <!-- Footer -->
     <footer class="footer mt-auto">
         <p class="m-0 text-center">

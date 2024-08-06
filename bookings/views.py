@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
-# from django.views.generic import TemplateView
 from django.views.generic import View
 from django.contrib import messages
 from .forms import ContactForm
+from .models import Course
 
 class IndexView(View):
     def get(self, request):
@@ -17,10 +17,7 @@ class IndexView(View):
             return redirect('home')
         return render(request, 'bookings/index.html', {'form': form})
 
-# class HomePage(TemplateView):
-#     """
-#     Displays home page"
-#     """
-#     template_name = 'base.html' 
-
-
+class CoursesView(View):
+    def get(self, request):
+        # courses = Course.objects.all()  # Retrieve all course objects from database
+        return render(request, 'bookings/course.html')

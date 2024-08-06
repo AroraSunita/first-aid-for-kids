@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">About Me</h2>
+    <p class="text-center">Here you can find all the courses we offer.</p>
+    <div class="row">
+        <!-- Course Year 3 -->
+         <h1>{{ user.username }}</h1>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="{% static 'images/course1.jpg' %}" class="card-img-top" alt="Course 1 Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ course.name }}</h5>
+                    <p class="card-text">{{ course.description }}</p>
+                    <a href="#" class="btn btn-signup">Book</a>
+                </div>
+            </div>
+        </div>
+        <!-- Course Year 4 -->
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="{% static 'images/course2.jpg' %}" class="card-img-top" alt="Course 2 Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ course.name }}</h5>
+                    <p class="card-text">{{ course.description }}</p>
+                    <a href="#" class="btn btn-signup">Book</a>
+                </div>
+            </div>
+        </div>
+        <!-- Course Year 5/6 -->
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="{% static 'images/course3.jpg' %}" class="card-img-top" alt="Course 3 Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ course.name }}</h5>
+                    <p class="card-text">{{ course.description }}</p>
+                    <a href="#" class="btn btn-signup">Book</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

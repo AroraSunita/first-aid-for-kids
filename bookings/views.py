@@ -13,7 +13,7 @@ class IndexView(View):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your message has been sent successfully!')
+            messages.success(request, 'Your message has been sent successfully! I will be in touch!')
             return redirect('home')
         return render(request, 'bookings/index.html', {'form': form})
 

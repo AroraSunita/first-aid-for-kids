@@ -88,6 +88,12 @@
    
 
     <main class="flex-grow-1 main-bg">
+      {% if user.is_authenticated %}
+        <p class="text-end m-3">Hello {{ user.username }}</p>
+        {% else %}
+        <p class="text-end m-3">Log in to book a course</p>
+        {% endif %}
+
       {% block content %}
       <!-- Content Goes here -->
       {% endblock content %}
@@ -101,7 +107,7 @@
             Made by Sunita Arora
             {% endblock copyright %}
         </p>
-        <p class="m-0 text-center">Follow me on <br>
+        <p class="m-0 text-center">Follow me <br>
           <a target="_blank" href="https://www.facebook.com"><i class="fab fa-facebook-square ms-2 mb-5"></i></a>
           <a target="_blank" href="https://www.linkedin.com"><i class="fab fa-linkedin ms-2 mb-5"></i></a>
           <a target="_blank" href="https://www.instagram.com"><i class="fab fa-instagram-square ms-2 mb-5"></i></a>

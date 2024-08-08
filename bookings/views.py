@@ -25,7 +25,7 @@ class IndexView(View):
 
 class CoursesView(View):
     def get(self, request):
-        courses = Course.objects.all()  # Retrieve all course objects from database
+        courses = Course.objects.all().order_by('id')  # Retrieve all course objects from database order by id
         return render(request, 'bookings/course.html', {'courses': courses})
 
 

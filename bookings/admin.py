@@ -8,8 +8,9 @@ class ContactAdmin(admin.ModelAdmin):
     list_display = ('comment', 'date')
  
 @admin.register(Course)
-class CourseAdmin(admin.ModelAdmin):
+class CourseAdmin(SummernoteModelAdmin):
     list_display = ('name', 'description')
+    summernote_fields = ('description',)
     
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):

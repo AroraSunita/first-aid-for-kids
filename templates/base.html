@@ -34,16 +34,16 @@
         <link rel="stylesheet" href="{% static 'css/style.css'%}" >
         
         <!-- FavIcon-->
-        <!-- <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png"> -->
+        <link rel="apple-touch-icon" sizes="180x180" href="static/images/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicons/favicon-16x16.png">
     </head>
 
 <body class="d-flex flex-column min-vh-100">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="{% url 'home' %}">Pooja's Kirat</a>
+          <a class="navbar-brand" href="{% url 'home' %}"> <img src="{% static 'images/logo.png' %}" alt="Logo" style="height: 40px; margin-right: 2px;">Pooja's Kirat</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

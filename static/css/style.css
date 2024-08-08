@@ -17,14 +17,23 @@ footer {
 }
 
 
-.btn-signup,
-.btn-edit {
+.btn-signup {
     background-color:#940e0a;
     color: #A6A6A6;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
+    background-color: #e0514c;
+    color: #A6A6A6;
+}
+
+.btn-edit {
+    background-color:#ffffff;
+    color: #940e0a;
+}
+
+.btn-edit:hover{
     background-color: #e0514c;
     color: #A6A6A6;
 }

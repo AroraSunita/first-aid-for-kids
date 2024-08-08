@@ -51,5 +51,14 @@ class BookingView(View):
             booking.course = course
             booking.save()
             messages.success(request, 'Great, you have successfully booked the course!')
-            return redirect('home')
+            return redirect('booked_courses')
         return render(request, 'bookings/booking.html', {'form': form, 'course': course})
+
+@method_decorator(login_required, name='dispatch')
+class UserBookingsView(View):
+    def get(self, request):
+        bookings = Booking.objects.filter(user=request.user)
+        return render(request, 'bookings/user_bookings.html', {'bookings': bookings})
+
+
+

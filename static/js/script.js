@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the date input field
+    // Get the date input field and time select element
     const dateInput = document.querySelector('input[name="date"]');
     const timeSelect = document.querySelector('select[name="time"]');
 
@@ -29,9 +29,17 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                     });
                 });
+            })
+            .catch(error => {
+                console.error('Error fetching booked times:', error);
             });
     }
 
     // Add event listener to date input
     dateInput.addEventListener('change', disableUnavailableTimeSlots);
+
+    // Check availability on page load if date is already selected
+    if (dateInput.value) {
+        disableUnavailableTimeSlots();
+    }
 });

@@ -87,7 +87,7 @@ class EditBookingView(View):
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Successfully edited the course, {request.user.username}!!')
+            messages.success(request, f'Successfully edited the course, {request.user.username}!')
             return redirect('booked_courses')
         return render(request, 'bookings/edit_booking.html', {'form': form, 'booking': booking})
 

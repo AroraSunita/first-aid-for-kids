@@ -1,5 +1,6 @@
 from django import forms
 from django.core.exceptions import ValidationError
+from django.utils import timezone
 from .models import Contact, Booking
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
@@ -47,7 +48,7 @@ class BookingForm(forms.ModelForm):
 
     def clean_date(self):
         date = self.cleaned_data.get('date')
-        if date < datetime.now().date():
+        if date and date < timezone.now().date():
             raise ValidationError("You cannot book a course in the past.")
         return date
 
@@ -59,4 +60,4 @@ class BookingForm(forms.ModelForm):
         if date and time:
             # Check if there is already a booking with the same date and time
             if Booking.objects.filter(date=date, time=time).exists():
-                raise forms.ValidationError("This time slot is already booked. Please choose a different time.")
+                raise ValidationError("This time slot is already booked. Please choose a different time.")

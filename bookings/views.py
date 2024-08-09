@@ -50,7 +50,7 @@ class BookingView(View):
             booking.user = request.user
             booking.course = course
             booking.save()
-            messages.success(request, 'Great, you have successfully booked the course!')
+            messages.success(request, f'Great {request.user.username}, you have successfully booked the course!')
             return redirect('booked_courses')
         return render(request, 'bookings/booking.html', {'form': form, 'course': course})
 
@@ -59,7 +59,7 @@ class BookingView(View):
 @method_decorator(login_required, name='dispatch')
 class UserBookingsView(View):
     def get(self, request):
-        bookings = Booking.objects.filter(user=request.user)
+        bookings = Booking.objects.filter(user=request.user).order_by('date')
         return render(request, 'bookings/user_bookings.html', {'bookings': bookings})
 
 
@@ -82,9 +82,14 @@ class EditBookingView(View):
 
 @method_decorator(login_required, name='dispatch')
 class DeleteBookingView(View):
-    model = Booking
-    success_url = reverse_lazy('bookings_list')  
     template_name = 'bookings/confirm_delete.html'
 
-    def get_queryset(self):
-        return self.model.objects.filter(user=self.request.user)
+    def get(self, request, booking_id):
+        booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+        return render(request, self.template_name, {'object': booking})
+
+    def post(self, request, booking_id):
+        booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+        booking.delete()
+        messages.success(request, f'The course has been deleted successfully, {request.user.username}!')
+        return redirect('booked_courses')

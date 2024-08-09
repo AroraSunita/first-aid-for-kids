@@ -12,20 +12,24 @@
         During my work in the emergency department, I encounter many children of all ages. I really enjoy guiding the children through their needs and explaining everything that is happening and what will be done.<br>
         I have noticed that children who come to the emergency department from playing outside or from school due to an accident do not always receive good information. This is not only about the type of injury but also about how to initially respond to such an accident. <br> <em>For example,</em> if you fall and get a wound, there are some steps you can take before going to the (family) doctor or hospital.<br>
         I want to convey this information to the children. In addition to explaining situations and how to respond to them, I also want to show the children how they can apply this knowledge to help another child. My goal is to teach children how to provide first aid to fellow students/children.</p>
-    <div class="row">
-        <!-- Course Year 3 --> 
-        {% for course in courses %}        
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <img src="{% static 'images/course1.jpg' %}" class="card-img-top" alt="Course 1 Image">
-                <div class="card-body">
-                    <h5 class="card-title">{{ course.name }}</h5>
-                    <p class="card-text">{{ course.description }}</p>
-                    <a href="{% url 'book_course' course.id %}" class="btn btn-signup">Book</a>
+        <div class="row">
+            <!-- Courses -->
+            {% for course in courses %}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    {% if course.image %}
+                        <img src="{{ course.image.url }}" class="card-img-top" alt="{{ course.name }} Image">
+                    {% else %}
+                        <img src="{% static 'images/default-course.jpg' %}" class="card-img-top" alt="Default Course Image">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ course.name }}</h5>
+                        <p class="card-text">{{ course.description }}</p>
+                        <a href="{% url 'book_course' course.id %}" class="btn btn-signup">Book</a>
+                    </div>
                 </div>
             </div>
-        </div>          
-        {% endfor %}
+            {% endfor %}
     </div>
 </div>
 {% endblock %}

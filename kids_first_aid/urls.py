@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from bookings.views import check_booked_times
 
 
 urlpatterns = [
@@ -26,6 +27,7 @@ urlpatterns = [
     path('', include('bookings.urls'), name='home'),
     path('courses/', include('bookings.urls'), name='course'),
     path("accounts/", include("allauth.urls")),
+    path('check-booked-times/', check_booked_times, name='check_booked_times'),
 ]
 
 if settings.DEBUG:

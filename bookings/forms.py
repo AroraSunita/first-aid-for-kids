@@ -42,7 +42,7 @@ class BookingForm(forms.ModelForm):
     def clean_date(self):
         date = self.cleaned_data.get('date')
         if date < timezone.now().date():
-            raise ValidationError("You cannot book a course in the past.")
+            raise ValidationError("Please select a valid date")
         return date
 
     def clean(self):
@@ -55,7 +55,7 @@ class BookingForm(forms.ModelForm):
                 current_time = timezone.now().strftime('%H:%M')
                 end_time = time.split(' - ')[1]
                 if end_time <= current_time:
-                    raise forms.ValidationError("You cannot book a course at a past time.")
+                    raise forms.ValidationError("Please select a valid date")
 
             # Check if the time slot is already booked
             if Booking.objects.filter(date=date, time=time).exists():

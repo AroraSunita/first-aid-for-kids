@@ -16,7 +16,7 @@ footer {
     font-family: lexend, sans-serif;
 }
 
-
+/* Buttons*/
 .btn-signup {
     font-family: lexend, sans-serif;
     background-color:#940e0a;
@@ -45,7 +45,7 @@ footer {
     filter: invert(1);
 }
 
-
+/* Cards in course */
 .card-body {
     display: flex;
     flex-direction: column;
@@ -53,6 +53,7 @@ footer {
     justify-content: space-between; 
 }
 
+/* Favicons */
 .fab {
     color:#940e0a
 }
@@ -60,6 +61,7 @@ footer {
     color: #e0514c
 }
 
+/* Navbar */
 .navbar {
     background-color: #940e0a;
 }
@@ -73,6 +75,7 @@ footer {
     color: #000000;
 }
 
+/* index image */
 .pic1 {
     max-width: 100%;
     border-radius: 50px;

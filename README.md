@@ -1,131 +1,84 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# First Aid for Kids
+Welcome to First Aid for Kids! This platform is designed to teach essential first aid skills to children in a fun, interactive, and accessible way. Pooja Dass, an experienced nurse working in the Accident & Emergency (A&E) department, this project aims to empower young learners with the knowledge and confidence to handle emergencies effectively.
+###  By Sunita Arora
 
-Welcome Sunita Arora,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# User Experience (UX)
+The goal of the First Aid for Kids website is to create a user-friendly platform where parents and educators can access essential first aid courses tailored for different age groups: Year 3, Year 4, and Years 5 & 6. Each course is designed to help children understand and apply basic first aid skills, empowering them to respond effectively in emergency situations.
+The website provides detailed information about each course, helping parents and educators choose the right program for their children or students. 
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+**Responsiveness:** The website is fully responsive, providing a seamless experience across different devices, including tablets and smartphones.
 
-## Gitpod Reminders
+## Project Goals: 
+### Agile Methodology
+This project was created using Agile principles, with a project board on GitHub to manage tasks effectively. The board allowed me to track features in different stages, from to do tasks, in-progress and done.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+For user stories, I used a standardized template as the foundation, ensuring consistency in their creation. 
+Each user story has the following format:
 
-`python3 -m http.server`
+"As a (role), I can (capability) so that (received benefit)."
 
-A blue button should appear to click: _Make Public_,
+Each user story included "Acceptance Criteria" to ensure tasks were completed and helped me in organizing and prioritizing the workflow.
 
-Another blue button should appear to click: _Open Browser_.
+### MoSCoW Prioritization
+I utilized the MoSCoW Prioritization method for this project, categorizing tasks into:
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+**Must Haves:**  Essential components critical for the project.
+**Should Haves:**  Valuable features, but not crucial for the MVP; these are prioritized after Must Haves.
+**Could Haves:** Additional features that would enhance the project, but only if time permits after addressing higher-priority tasks.
 
-A blue button should appear to click: _Make Public_,
+The review page was classified as a "Should Have" feature. Due to time constraints, it was not implemented and remains on my to-do list.
 
-Another blue button should appear to click: _Open Browser_.
+![image](https://github.com/user-attachments/assets/4ae10425-1939-4da9-87b6-fcd395781d97)
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+### User Stories
+![image](https://github.com/user-attachments/assets/6f5b249d-b6cb-40aa-b85c-5800fe502aa7)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+# Design
+### Colors
+The color palette for this project was thoughtfully chosen to ensure both visual appeal and usability.
+![image](https://github.com/user-attachments/assets/91b5c200-a0be-425b-b46e-2db10e21fa84)
+The selected colors were chosen to complement the project’s branding while ensuring strong contrast and readability for an optimal user experience.
 
-### Connecting your Mongo database
+### Wireframes
+I have used Canva to create the wireframes for different devices:
+Homepage:
+![image](https://github.com/user-attachments/assets/dd706317-fb3d-4aff-8572-a590797841f9)
+![7](https://github.com/user-attachments/assets/06064515-c107-4de3-b16a-f18d0f980f17)
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+Bookings page:
+![image](https://github.com/user-attachments/assets/e3ddd0f1-dc04-4726-9ae4-b8194111dfa9)
+![8](https://github.com/user-attachments/assets/82c466d0-e265-4993-98da-315729bdc175)
 
-------
+Sign in page:
+![image](https://github.com/user-attachments/assets/ec778b4a-014c-4675-ae3b-ac414e3c962b)
+![14](https://github.com/user-attachments/assets/4ae12d21-0b77-4b05-88d3-d02066d18b03)
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Book your Course page:
+![image](https://github.com/user-attachments/assets/fa3d7d9f-d390-4000-bfac-9d6688b6ada7)
+![13](https://github.com/user-attachments/assets/0cc54c36-88ad-4e4e-9393-2f73fc81b88f)
 
-**June 18, 2024,** Add Mongo back into template
+Users Booked page:
+![image](https://github.com/user-attachments/assets/958bb70a-ac21-4393-96e8-f1e984ff5465)
+![12](https://github.com/user-attachments/assets/5586c887-02ac-4780-99fb-8def423da68f)
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+Add Review page:
+![image](https://github.com/user-attachments/assets/b0634131-fb9b-429f-b26e-96a67dbb3e53)
+![11](https://github.com/user-attachments/assets/96e658e9-201a-48a0-a0d9-768472db3edb)
 
-**May 28 2024:** Fix Mongo and Links installs
 
-**April 26 2024:** Update node version to 16
+Review page:
+![image](https://github.com/user-attachments/assets/0166209b-ccc7-46cd-beab-3e683c9464dd)
+![9](https://github.com/user-attachments/assets/393b8385-3cc9-4f7e-a0fd-d0af505ba3e4)
 
-**September 20 2023:** Update Python version to 3.9.17.
+Sign out page:
+![image](https://github.com/user-attachments/assets/d52645ea-361f-4f00-8c91-0e9001912705)
+![10](https://github.com/user-attachments/assets/b2e3eabf-ab84-4ca0-965d-b0e79f7685af)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Database Diagrams (ERD) 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!

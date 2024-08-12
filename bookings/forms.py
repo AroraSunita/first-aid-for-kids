@@ -57,6 +57,6 @@ class BookingForm(forms.ModelForm):
                 if end_time <= current_time:
                     raise forms.ValidationError("Please select a valid date")
 
-            # Check if the time slot is already booked
+            # Checks if the time slot is already booked
             if Booking.objects.filter(date=date, time=time).exists():
                 raise forms.ValidationError("This time slot is already booked. Please choose a different time.")

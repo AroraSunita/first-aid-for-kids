@@ -32,7 +32,6 @@ class IndexView(View):
         return render(request, 'bookings/index.html', {'form': form})
 
 
-
 class CoursesView(View):
     def get(self, request):
         courses = Course.objects.all().order_by('id')  # Retrieve all course objects from database order by id
@@ -87,7 +86,7 @@ class EditBookingView(View):
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Successfully edited the course, {request.user.username}!')
+            messages.success(request, f'Successfully edited your booking, {request.user.username}!')
             return redirect('booked_courses')
         return render(request, 'bookings/edit_booking.html', {'form': form, 'booking': booking})
 
@@ -104,5 +103,5 @@ class DeleteBookingView(View):
     def post(self, request, booking_id):
         booking = get_object_or_404(Booking, id=booking_id, user=request.user)
         booking.delete()
-        messages.success(request, f'The course has been deleted successfully, {request.user.username}!')
+        messages.success(request, f'The booking has been deleted successfully, {request.user.username}!')
         return redirect('booked_courses')

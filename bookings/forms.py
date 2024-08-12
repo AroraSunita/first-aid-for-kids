@@ -39,16 +39,9 @@ class BookingForm(forms.ModelForm):
             'time': forms.Select(choices=TIME_CHOICES),
         }
 
-    def __init__(self, *args, **kwargs):
-        super(BookingForm, self).__init__(*args, **kwargs)
-        self.helper = FormHelper()
-        self.helper.form_method = 'post'
-        self.helper.template_pack = 'bootstrap5'
-        self.helper.add_input(Submit('submit', 'Book'))
-
     def clean_date(self):
         date = self.cleaned_data.get('date')
-        if date and date < timezone.now().date():
+        if date < timezone.now().date():
             raise ValidationError("You cannot book a course in the past.")
         return date
 
@@ -58,6 +51,12 @@ class BookingForm(forms.ModelForm):
         time = cleaned_data.get("time")
 
         if date and time:
-            # Check if there is already a booking with the same date and time
+            if date == timezone.now().date():
+                current_time = timezone.now().strftime('%H:%M')
+                end_time = time.split(' - ')[1]
+                if end_time <= current_time:
+                    raise forms.ValidationError("You cannot book a course at a past time.")
+
+            # Check if the time slot is already booked
             if Booking.objects.filter(date=date, time=time).exists():
-                raise ValidationError("This time slot is already booked. Please choose a different time.")
+                raise forms.ValidationError("This time slot is already booked. Please choose a different time.")

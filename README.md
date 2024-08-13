@@ -41,7 +41,6 @@ The review page was categorized as a "Should Have" feature. Due to time constrai
 
 ![image](https://github.com/user-attachments/assets/4ae10425-1939-4da9-87b6-fcd395781d97)
 
-
 ### User Stories
 ![image](https://github.com/user-attachments/assets/6f5b249d-b6cb-40aa-b85c-5800fe502aa7)
 
@@ -300,6 +299,20 @@ I tested the site using Google Chrome, utilizing development tools to check resp
 ![image](https://github.com/user-attachments/assets/571cce26-9999-42d0-9a80-aa77c754824c)
 ![image](https://github.com/user-attachments/assets/60df721b-11c5-46a7-b73c-d2ac8e453c08)
 
+## Admin Control
+![image](https://github.com/user-attachments/assets/ab67be50-7c16-4f90-b455-52ac63a44e21)
+
+## Dashboard
+![image](https://github.com/user-attachments/assets/d409183f-8df4-4d93-97e1-de1515b806f2)
+
+## Courses
+![image](https://github.com/user-attachments/assets/56b7a607-9a6a-4ab1-820c-ffdb2fc2e941)
+
+# Links
+##  [Deployment](https://book-first-aid-for-kids-10d25c2a43b1.herokuapp.com/)
+##  [GitHub Repository](https://github.com/AroraSunita/first-aid-for-kids)
+##  [Kanban Board](https://github.com/users/AroraSunita/projects/3/views/1)
+
 # Tools, Technologies and Languages used
 The technologies implemented in this application included HTML5, CSS, Bootstrap 5, Python and Django.
 
@@ -313,10 +326,13 @@ The technologies implemented in this application included HTML5, CSS, Bootstrap 
 - Heroku used for hosting the deployed.
 - Canva Utilized for Wireframes and Diagrams ERD
 
+# Bugs
+All the bugs that occured during the creation of this webpage have been resolved. 
+
 # Citation of Sources
 ### Credits
 I used the django blog resources provided on the LMS from Code Institute and and drew inspiration from [ELVI](https://elvira-espinoza-50ffaf8a32fa.herokuapp.com/)
-A special thanks to my classmates and friends, as well as the Code Institute's Slack community, for their invaluable teaching and support.
+A special thanks to my classmates and friends, as well as the Code Institute's Slack community and tutors for their invaluable teaching and support.
 Font Awesome was used for icons and the fonts used were from Google Fonts.
 For Favicon I have used the Favicon Generator from [favicon.io](https://favicon.io/)
 Crispy bootstrap5 from https://github.com/django-crispy-forms/crispy-bootstrap5
